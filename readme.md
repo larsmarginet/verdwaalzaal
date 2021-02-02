@@ -1,7 +1,7 @@
-# 5 - PROCESSING & ARDUINO - MADMAPPER
+# 6 - PROCESSING & NEUROSKY
 
-This is a simple sketch to test making a screen recording of the Processing canvas.
+This is a sketch to connect your neurosky EEG sensor to Processing.
 
-The saveFrame() method creates a PNG of the current frame, so at the end you get a png-sequence from all the frames. 
+To make this work, you'll need to download the tool [thinkgearconnector](http://developer.neurosky.com/docs/doku.php?id=thinkgear_connector_tgc). This enables the communication between the two and will return the result in JSON. 
 
-On line 14 of the sketch the port is set to /dev/tty.usbmodem142101, but it might be a different one for you, so be sure to set it to the right one.
+You will also have to add the [Thinkgear-Java-Socket](https://github.com/borg/ThinkGear-Java-socket) library to Processing. 
