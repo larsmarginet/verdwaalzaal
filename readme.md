@@ -1,9 +1,5 @@
-# 9 - PROCESSING & NEUROSKY - PERLIN NOISE
+# 10 - PROCESSING & PIXELSORTING
 
-This is a first experimental visual made with perlin noise, based on the algorithm developed by [wangyasai](https://wangyasai.github.io/Perlin-Noise/) with the Memento color scheme. 
-
-To make this work, you'll need to download the tool [thinkgearconnector](http://developer.neurosky.com/docs/doku.php?id=thinkgear_connector_tgc). This enables the communication between the two and will return the result in JSON.
-
-You will also have to add the [Thinkgear-Java-Socket](https://github.com/borg/ThinkGear-Java-socket) library to Processing.
+This is an experimental visual made with pixel sorting, based on the algorithm developed by [kimasendorf](https://github.com/kimasendorf/ASDFPixelSort). 
 
 ![example](sketch.png "Example")
