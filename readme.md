@@ -1,6 +1,6 @@
-# 6 - PROCESSING & NEUROSKY
+# 7 - PROCESSING & NEUROSKY NORMALIZE
 
-This is a sketch to connect your neurosky EEG sensor to Processing.
+This is a sketch to connect your neurosky EEG sensor to Processing and read the values by normalizing them.
 
 To make this work, you'll need to download the tool [thinkgearconnector](http://developer.neurosky.com/docs/doku.php?id=thinkgear_connector_tgc). This enables the communication between the two and will return the result in JSON. 
 
