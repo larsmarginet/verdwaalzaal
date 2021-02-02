@@ -6,6 +6,7 @@ float background_color ;       // Variable for changing the background color
 PGraphics canvas;
 SyphonServer server;
 
+boolean recording = false; 
 
 void setup () {
   size(3840, 1080, P3D);
@@ -19,6 +20,12 @@ void serialEvent (Serial myPort) {
   background_color  =  float (myPort.readStringUntil ( '\n' ) ) ;  // Changing the background color according to received data
 } 
 
+void keyPressed() {
+  if (key == 'r' || key == 'R' ) {
+      recording = !recording;
+  }
+}
+
 void draw ( ) {
   // create everything in the secondary canvas in order to show it in syphon
   // canvas.background ( 150, 50, background_color );   // Initial background color, when we will open the serial window 
@@ -26,5 +33,10 @@ void draw ( ) {
   canvas.background(150, 50, background_color);
   canvas.endDraw();
   image(canvas, 0, 0);
+  
+  if (recording) {
+    saveFrame("output/frame_####.png");
+  }
+  println(frameRate);
   server.sendImage(canvas);
 }
