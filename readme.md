@@ -1,8 +1,6 @@
-# 8 - PROCESSING & NEUROSKY LOGARITHM
+# 9 - PROCESSING & NEUROSKY - PERLIN NOISE
 
-This is a sketch to connect your neurosky EEG sensor to Processing and read the values by taking the logarithm and then normalizing them.
-
-In the Neurosky [documentation](http://support.neurosky.com/kb/development-2/eeg-band-power-values-units-amplitudes-and-meaning) it states that the values are exponential, thus you can bring them down within the same range by taking the logarithm.
+This is a first experimental visual made with perlin noise, based on the algorithm developed by [wangyasai](https://wangyasai.github.io/Perlin-Noise/) with the Memento color scheme. 
 
 To make this work, you'll need to download the tool [thinkgearconnector](http://developer.neurosky.com/docs/doku.php?id=thinkgear_connector_tgc). This enables the communication between the two and will return the result in JSON.
 
