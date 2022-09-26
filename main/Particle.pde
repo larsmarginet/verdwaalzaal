@@ -37,6 +37,7 @@ class Particle {
   
   void display(float radius, PImage img, int multFactor) {
     color c = 255;
+    
     if(img != null) {
       for (int i = 1; i <= multFactor; i++) {
         if (originalPixel.x < (img.width * i)) { 
@@ -45,6 +46,7 @@ class Particle {
         }
       }
     }
+ 
     fill(c);
     rect(position.x, position.y, radius, radius); 
   }
