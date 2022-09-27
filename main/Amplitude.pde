@@ -4,6 +4,7 @@ class Amplitude {
     float threshold;
     float amplitude;
     int index;
+    FFT fft;
 
     Amplitude(SoundFile f, float t, float a, int i) {
         instrument = f;
@@ -11,7 +12,7 @@ class Amplitude {
         instrument.amp(.005);
         threshold = t;
         amplitude = a; 
-       index = i;
+        index = i;
     }
 
     void update() {     
