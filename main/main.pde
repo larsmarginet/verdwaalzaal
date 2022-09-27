@@ -14,7 +14,7 @@ int maxParticles = 50000;
 int noiseAmount = 800;
 Particle[] particles = new Particle[maxParticles];
 
-Poem[] poems = new Poem[5];
+Poem[] poems = new Poem[6];
 int activePoemIndex = 0;
 
 // emotions
@@ -32,55 +32,71 @@ void setup() {
   
   // set poems
   Amplitude[] amps1 = { 
-    new Amplitude(new SoundFile(this, "data/01.wav"), .1, .005), 
-    new Amplitude(new SoundFile(this, "data/02.wav"), .5, .005),
-    new Amplitude(new SoundFile(this, "data/03.wav"), .8, .005),
-    new Amplitude(new SoundFile(this, "data/04.wav"), 1.1, .005),
-    new Amplitude(new SoundFile(this, "data/05.wav"), 1.4, .005),
-    new Amplitude(new SoundFile(this, "data/06.wav"), 1.7, .005),
+    new Amplitude(new SoundFile(this, "data/audio/1/1.wav"), .1, .005, 0), 
+    new Amplitude(new SoundFile(this, "data/audio/1/2.wav"), .5, .005, 0),
+    new Amplitude(new SoundFile(this, "data/audio/1/3.wav"), .8, .005, 0),
+    new Amplitude(new SoundFile(this, "data/audio/1/4.wav"), 1.1, .005, 0),
+    new Amplitude(new SoundFile(this, "data/audio/1/5.wav"), 1.4, .005, 0),
+    new Amplitude(new SoundFile(this, "data/audio/1/6.wav"), 1.7, .005, 0),
+    new Amplitude(new SoundFile(this, "data/audio/1/7.wav"), 2.0, .005, 0),
   };
   
   Amplitude[] amps2 = { 
-    new Amplitude(new SoundFile(this, "data/01.wav"), .1, .005), 
-    new Amplitude(new SoundFile(this, "data/02.wav"), .5, .005),
-    new Amplitude(new SoundFile(this, "data/03.wav"), .8, .005),
-    new Amplitude(new SoundFile(this, "data/04.wav"), 1.1, .005),
-    new Amplitude(new SoundFile(this, "data/05.wav"), 1.4, .005),
-    new Amplitude(new SoundFile(this, "data/06.wav"), 1.7, .005),
+    new Amplitude(new SoundFile(this, "data/audio/2/1.wav"), .1, .005, 1), 
+    new Amplitude(new SoundFile(this, "data/audio/2/2.wav"), .5, .005, 1),
+    new Amplitude(new SoundFile(this, "data/audio/2/3.wav"), .8, .005, 1),
+    new Amplitude(new SoundFile(this, "data/audio/2/4.wav"), 1.1, .005, 1),
+    new Amplitude(new SoundFile(this, "data/audio/2/5.wav"), 1.4, .005, 1),
+    new Amplitude(new SoundFile(this, "data/audio/2/6.wav"), 1.7, .005, 1),
+    new Amplitude(new SoundFile(this, "data/audio/2/7.wav"), 2.0, .005, 1),
   };
   
   Amplitude[] amps3 = { 
-    new Amplitude(new SoundFile(this, "data/01.wav"), .1, .005), 
-    new Amplitude(new SoundFile(this, "data/02.wav"), .5, .005),
-    new Amplitude(new SoundFile(this, "data/03.wav"), .8, .005),
-    new Amplitude(new SoundFile(this, "data/04.wav"), 1.1, .005),
-    new Amplitude(new SoundFile(this, "data/05.wav"), 1.4, .005),
-    new Amplitude(new SoundFile(this, "data/06.wav"), 1.7, .005),
+    new Amplitude(new SoundFile(this, "data/audio/3/1.wav"), .1, .005, 2), 
+    new Amplitude(new SoundFile(this, "data/audio/3/2.wav"), .5, .005, 2),
+    new Amplitude(new SoundFile(this, "data/audio/3/3.wav"), .8, .005, 2),
+    new Amplitude(new SoundFile(this, "data/audio/3/4.wav"), 1.1, .005, 2),
+    new Amplitude(new SoundFile(this, "data/audio/3/5.wav"), 1.4, .005, 2),
+    new Amplitude(new SoundFile(this, "data/audio/3/6.wav"), 1.7, .005, 2),
+    new Amplitude(new SoundFile(this, "data/audio/3/7.wav"), 2.0, .005, 2),
   };
   
   Amplitude[] amps4 = { 
-    new Amplitude(new SoundFile(this, "data/01.wav"), .1, .005), 
-    new Amplitude(new SoundFile(this, "data/02.wav"), .5, .005),
-    new Amplitude(new SoundFile(this, "data/03.wav"), .8, .005),
-    new Amplitude(new SoundFile(this, "data/04.wav"), 1.1, .005),
-    new Amplitude(new SoundFile(this, "data/05.wav"), 1.4, .005),
-    new Amplitude(new SoundFile(this, "data/06.wav"), 1.7, .005),
+    new Amplitude(new SoundFile(this, "data/audio/4/1.wav"), .1, .005, 3), 
+    new Amplitude(new SoundFile(this, "data/audio/4/2.wav"), .5, .005, 3),
+    new Amplitude(new SoundFile(this, "data/audio/4/3.wav"), .8, .005, 3),
+    new Amplitude(new SoundFile(this, "data/audio/4/4.wav"), 1.1, .005, 3),
+    new Amplitude(new SoundFile(this, "data/audio/4/5.wav"), 1.4, .005, 3),
+    new Amplitude(new SoundFile(this, "data/audio/4/6.wav"), 1.7, .005, 3),
+    new Amplitude(new SoundFile(this, "data/audio/4/7.wav"), 2.0, .005, 3),
   };
   
   Amplitude[] amps5 = { 
-    new Amplitude(new SoundFile(this, "data/01.wav"), .1, .005), 
-    new Amplitude(new SoundFile(this, "data/02.wav"), .5, .005),
-    new Amplitude(new SoundFile(this, "data/03.wav"), .8, .005),
-    new Amplitude(new SoundFile(this, "data/04.wav"), 1.1, .005),
-    new Amplitude(new SoundFile(this, "data/05.wav"), 1.4, .005),
-    new Amplitude(new SoundFile(this, "data/06.wav"), 1.7, .005),
+    new Amplitude(new SoundFile(this, "data/audio/5/1.wav"), .1, .005, 4), 
+    new Amplitude(new SoundFile(this, "data/audio/5/2.wav"), .5, .005, 4),
+    new Amplitude(new SoundFile(this, "data/audio/5/3.wav"), .8, .005, 4),
+    new Amplitude(new SoundFile(this, "data/audio/5/4.wav"), 1.1, .005, 4),
+    new Amplitude(new SoundFile(this, "data/audio/5/5.wav"), 1.4, .005, 4),
+    new Amplitude(new SoundFile(this, "data/audio/5/6.wav"), 1.7, .005, 4),
+    new Amplitude(new SoundFile(this, "data/audio/5/7.wav"), 2.0, .005, 4),
+  };
+  
+  Amplitude[] amps6 = { 
+    new Amplitude(new SoundFile(this, "data/audio/6/1.wav"), .1, .005, 5), 
+    new Amplitude(new SoundFile(this, "data/audio/6/2.wav"), .5, .005, 5),
+    new Amplitude(new SoundFile(this, "data/audio/6/3.wav"), .8, .005, 5),
+    new Amplitude(new SoundFile(this, "data/audio/6/4.wav"), 1.1, .005, 5),
+    new Amplitude(new SoundFile(this, "data/audio/6/5.wav"), 1.4, .005, 5),
+    new Amplitude(new SoundFile(this, "data/audio/6/6.wav"), 1.7, .005, 5),
+    new Amplitude(new SoundFile(this, "data/audio/6/7.wav"), 2.0, .005, 5),
   };
 
-  poems[0] = new Poem(this, "video.mp4", amps1);
-  poems[1] = new Poem(this, "video-s.mp4", amps2);
-  poems[2] = new Poem(this, "final.mp4", amps3);
-  poems[3] = new Poem(this, "video.mp4", amps4);
-  poems[4] = new Poem(this, "final.mp4", amps5);
+  poems[0] = new Poem(this, "video/1.mp4", amps1);
+  poems[1] = new Poem(this, "video/2.mp4", amps2);
+  poems[2] = new Poem(this, "video/3.mp4", amps3);
+  poems[3] = new Poem(this, "video/4.mp4", amps4);
+  poems[4] = new Poem(this, "video/5.mp4", amps5);
+  poems[5] = new Poem(this, "video/6.mp4", amps6);
   
   
   initActiveVideo();
@@ -111,14 +127,20 @@ void initParticles() {
   }
 }
 
+int prevIndex = 0;
+
 void incrementActivePoem() {
   if (activePoemIndex < poems.length - 1) {
     activePoemIndex++;
   } else {
     activePoemIndex = 0;
   }
-  
+
+  updateAudioAtIndex(prevIndex);
+
   initActiveVideo();
+
+  prevIndex = activePoemIndex;
 }
 
 void decrementActivePoem() {
@@ -128,7 +150,11 @@ void decrementActivePoem() {
     activePoemIndex--;
   }
   
+  updateAudioAtIndex(prevIndex);
+
   initActiveVideo();
+
+  prevIndex = activePoemIndex;
 }
 
 void resetSequence() {
@@ -141,7 +167,6 @@ void mousePressed() {
 }
 
 void keyPressed() {
-  print(keyCode);
   switch (keyCode) {
     // R
     case 82:
@@ -156,7 +181,12 @@ void keyPressed() {
       incrementActivePoem();
       break;
   } 
-  
+}
+
+void updateAudioAtIndex(int index) {
+  for (int i = 0; i < poems[index].tracks.length; i++) {
+    poems[index].tracks[i].update();
+  }
 }
 
 void draw() {
@@ -173,9 +203,7 @@ void draw() {
   }
 
   // update audio amplitude
-  for (int i = 0; i < poems[activePoemIndex].tracks.length; i++) {
-    poems[activePoemIndex].tracks[i].update();
-  }
+  updateAudioAtIndex(activePoemIndex);
   
   if (activeVideo.available()) {
     activeVideo.read();

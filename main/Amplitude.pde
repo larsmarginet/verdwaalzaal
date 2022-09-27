@@ -3,16 +3,25 @@ class Amplitude {
     SoundFile instrument;
     float threshold;
     float amplitude;
+    int index;
 
-    Amplitude(SoundFile i, float t, float a) {
-        instrument = i;
+    Amplitude(SoundFile f, float t, float a, int i) {
+        instrument = f;
         instrument.loop();
-        instrument.amp(0.005);
+        instrument.amp(.005);
         threshold = t;
         amplitude = a; 
+       index = i;
     }
 
-    void update() {
+    void update() {     
+        if (index != activePoemIndex) {
+            print("bingo!");
+            instrument.amp(.005);
+
+            return;
+        }
+
         if (emotionAverage >= threshold) {
             if (amplitude < .500) amplitude += fspeed;
         } else if (emotionAverage < threshold) {
